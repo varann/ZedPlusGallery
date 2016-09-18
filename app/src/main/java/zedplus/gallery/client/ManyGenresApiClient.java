@@ -1,7 +1,17 @@
 package zedplus.gallery.client;
 
+import java.util.List;
+
+import zedplus.gallery.client.model.Genre;
+
 /**
- * Created by asavinova on 18/09/16.
+ * @author Anna Savinova
  */
-public class ManyGenresApiClient implements ApiClient {
+public class ManyGenresApiClient extends LinksApiClient {
+
+	@Override
+	public List<Genre> getGenres() {
+		return genres;
+	}
+
 }
