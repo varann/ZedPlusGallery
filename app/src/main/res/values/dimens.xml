@@ -2,5 +2,8 @@
 <resources>
 
 	<dimen name="offset_normal">16dp</dimen>
+	<dimen name="offset_small">8dp</dimen>
+
+	<dimen name="rounded_corners_size">4dp</dimen>
 
 </resources>

@@ -3,6 +3,7 @@ package zedplus.gallery.ui;
 import android.support.v7.app.AppCompatActivity;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 
 import javax.inject.Inject;
@@ -24,4 +25,8 @@ public class StartActivity extends AppCompatActivity {
 		((App) getApplication()).component().inject(this);
 	}
 
+	@Click(R.id.many_genres_button)
+	void showGallery(){
+		GalleryActivity_.intent(this).start();
+	}
 }
