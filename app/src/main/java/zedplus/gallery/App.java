@@ -2,7 +2,7 @@ package zedplus.gallery;
 
 import android.app.Application;
 
-import zedplus.gallery.dagger.ClientModule;
+import zedplus.gallery.dagger.GalleryModule;
 import zedplus.gallery.dagger.DaggerGalleryComponent;
 import zedplus.gallery.dagger.GalleryComponent;
 
@@ -18,7 +18,7 @@ public class App extends Application {
 		super.onCreate();
 
 		component = DaggerGalleryComponent.builder()
-				.clientModule(new ClientModule(this))
+				.galleryModule(new GalleryModule())
 				.build();
 	}
 

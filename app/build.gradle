@@ -42,8 +42,14 @@ dependencies {
 	apt "com.google.dagger:dagger-compiler:$daggerVersion"
 	compile "com.google.dagger:dagger:$daggerVersion"
 
+	apt 'com.jakewharton:butterknife-compiler:8.4.0'
+	compile 'com.jakewharton:butterknife:8.4.0'
+
 	compile "com.android.support:appcompat-v7:$supportVersion"
 	compile "com.android.support:recyclerview-v7:$supportVersion"
+
+	compile 'com.squareup.picasso:picasso:2.5.2'
+	compile 'org.greenrobot:eventbus:3.0.0'
 
 	testCompile 'junit:junit:4.12'
 }

@@ -1,6 +1,8 @@
 <manifest package="zedplus.gallery"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 
+	<uses-permission android:name="android.permission.INTERNET" />
+
 	<application
 		android:allowBackup="true"
 		android:icon="@mipmap/ic_launcher"
@@ -9,14 +11,14 @@
 		android:theme="@style/AppTheme"
 		android:name=".App">
 
-		<activity android:name=".ui.StartActivity_">
+		<activity android:name=".ui.StartActivity_" />
+
+		<activity android:name=".ui.GalleryActivity_">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-
-		<activity android:name=".ui.GalleryActivity_" />
 
 	</application>
 

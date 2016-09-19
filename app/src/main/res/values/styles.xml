@@ -3,4 +3,9 @@
 	<style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
 	</style>
 
+	<style name="Text">
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textSize">@dimen/text_size</item>
+	</style>
+
 </resources>

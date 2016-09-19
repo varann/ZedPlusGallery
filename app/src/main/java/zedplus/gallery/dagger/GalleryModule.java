@@ -1,6 +1,8 @@
 package zedplus.gallery.dagger;
 
-import android.content.Context;
+import org.greenrobot.eventbus.EventBus;
+
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -11,17 +13,20 @@ import zedplus.gallery.client.ManyGenresApiClient;
  * Created by asavinova on 18/09/16.
  */
 @Module
-public class ClientModule {
+public class GalleryModule {
 
-	private Context context;
-
-	public ClientModule(Context context) {
-		this.context = context;
+	public GalleryModule() {
 	}
 
 	@Provides
 	public ApiClient client() {
 		return new ManyGenresApiClient();
+	}
+
+	@Provides
+	@Singleton
+	public EventBus eventBus() {
+		return EventBus.getDefault();
 	}
 
 }
