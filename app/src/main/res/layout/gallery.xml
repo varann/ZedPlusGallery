@@ -5,7 +5,7 @@
 	android:background="@drawable/bg"
 	android:orientation="vertical">
 
-	<android.support.v7.widget.RecyclerView
+	<zedplus.gallery.ui.genres.GenresRecyclerView
 		android:id="@+id/genres_view"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
 		android:layout_marginTop="@dimen/offset_normal"
 		android:src="@drawable/arrow" />
 
-	<android.support.v7.widget.RecyclerView
+	<zedplus.gallery.ui.movies.MoviesRecyclerView
 		android:id="@+id/movies_view"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
