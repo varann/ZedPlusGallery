@@ -17,6 +17,7 @@ import org.greenrobot.eventbus.EventBus;
 import javax.inject.Inject;
 
 import zedplus.gallery.App;
+import zedplus.gallery.R;
 
 /**
  * @author Anna Savinova
@@ -66,7 +67,7 @@ public class GenresRecyclerView extends RecyclerView {
 				GenresRecyclerView.this.adapter.updateViews(itemWidth);
 				layoutManager.scrollToPositionWithOffset(GenresRecyclerView.this.adapter.getRealItemCount() - 1, offset);
 				// Фиксированная высота с учетом максимального масштаба элемента
-				setMinimumHeight((int) (itemWidth * MAX_SCALE));
+				setMinimumHeight((int) (itemWidth * MAX_SCALE) + 2 * getResources().getDimensionPixelSize(R.dimen.offset_normal));
 			}
 		});
 
