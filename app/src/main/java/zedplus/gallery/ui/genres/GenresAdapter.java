@@ -68,7 +68,7 @@ public class GenresAdapter extends RecyclerView.Adapter<ItemViewHolder> {
 	}
 
 	public void updateViews(int width) {
-		itemWidth = width / VISIBLE_ITEMS_COUNT;
+		itemWidth = width;
 		notifyDataSetChanged();
 	}
 

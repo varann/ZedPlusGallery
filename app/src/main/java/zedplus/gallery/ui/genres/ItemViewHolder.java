@@ -2,8 +2,8 @@ package zedplus.gallery.ui.genres;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.greenrobot.eventbus.EventBus;
@@ -29,6 +29,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
 	@Inject EventBus eventBus;
 
 	private long id;
+	private int imageWidth;
 
 	public ItemViewHolder(View itemView) {
 		super(itemView);
@@ -51,6 +52,13 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
 	}
 
 	public void update(int itemWidth) {
-		container.setLayoutParams(new ViewGroup.LayoutParams(itemWidth, ViewGroup.LayoutParams.WRAP_CONTENT));
+		int padding = itemView.getResources().getDimensionPixelSize(R.dimen.offset_small);
+		this.imageWidth = itemWidth - 2 * padding;
+
+		imageView.setLayoutParams(new LinearLayout.LayoutParams(imageWidth, LinearLayout.LayoutParams.WRAP_CONTENT));
+	}
+
+	public void setScale(float scale) {
+		imageView.setLayoutParams(new LinearLayout.LayoutParams((int) (imageWidth * scale), LinearLayout.LayoutParams.WRAP_CONTENT));
 	}
 }

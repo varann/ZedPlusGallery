@@ -13,6 +13,8 @@
 		android:layout_marginEnd="@dimen/offset_small"
 		android:layout_marginStart="@dimen/offset_small"
 		android:layout_marginTop="@dimen/offset_normal"
+		android:paddingTop="@dimen/offset_normal"
+		android:paddingBottom="@dimen/offset_normal"
 		android:background="@drawable/genres_bg" />
 
 	<ImageView
