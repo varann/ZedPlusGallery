@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import zedplus.gallery.R;
@@ -43,6 +45,13 @@ public class MoviesAdapter extends RecyclerView.Adapter<ItemViewHolder> {
 	}
 
 	public void update(List<Movie> movies) {
+		Collections.sort(movies, new Comparator<Movie>() {
+			@Override
+			public int compare(Movie movie1, Movie movie2) {
+				return movie1.getName().compareTo(movie2.getName());
+			}
+		});
+
 		this.movies = movies;
 		notifyDataSetChanged();
 	}
