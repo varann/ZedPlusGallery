@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@drawable/bg"
-	android:orientation="vertical">
+	android:background="@drawable/bg">
 
-	<zedplus.gallery.ui.genres.GenresRecyclerView
-		android:id="@+id/genres_view"
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="@dimen/offset_normal"
-		android:layout_marginEnd="@dimen/offset_small"
-		android:layout_marginStart="@dimen/offset_small"
-		android:layout_marginTop="@dimen/offset_normal"
-		android:paddingTop="@dimen/offset_normal"
-		android:paddingBottom="@dimen/offset_normal"
-		android:background="@drawable/genres_bg" />
+		android:orientation="vertical">
 
-	<ImageView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_gravity="center_horizontal"
-		android:layout_marginBottom="@dimen/offset_normal"
-		android:layout_marginTop="@dimen/offset_normal"
-		android:src="@drawable/arrow" />
+		<zedplus.gallery.ui.genres.GenresRecyclerView
+			android:id="@+id/genres_view"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/offset_normal"
+			android:layout_marginEnd="@dimen/offset_small"
+			android:layout_marginStart="@dimen/offset_small"
+			android:layout_marginTop="@dimen/offset_normal"
+			android:background="@drawable/genres_bg"
+			android:paddingBottom="@dimen/offset_normal"
+			android:paddingTop="@dimen/offset_normal" />
 
-	<zedplus.gallery.ui.movies.MoviesRecyclerView
-		android:id="@+id/movies_view"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:padding="@dimen/offset_small"
-		android:clipToPadding="false" />
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginBottom="@dimen/offset_normal"
+			android:layout_marginTop="@dimen/offset_normal"
+			android:src="@drawable/arrow" />
 
-</LinearLayout>
+		<zedplus.gallery.ui.movies.MoviesRecyclerView
+			android:id="@+id/movies_view"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:clipToPadding="false"
+			android:padding="@dimen/offset_small" />
+
+	</LinearLayout>
+
+</ScrollView>

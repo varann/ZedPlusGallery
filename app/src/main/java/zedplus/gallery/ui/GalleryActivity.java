@@ -1,7 +1,6 @@
 package zedplus.gallery.ui;
 
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -37,7 +36,6 @@ public class GalleryActivity extends AppCompatActivity {
 
 	private GenresAdapter genresAdapter;
 	private MoviesAdapter moviesAdapter;
-	private LinearLayoutManager moviesLayout;
 
 	@AfterViews
 	void afterViews() {
