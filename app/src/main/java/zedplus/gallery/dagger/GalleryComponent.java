@@ -5,7 +5,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 import zedplus.gallery.ui.GalleryActivity;
 import zedplus.gallery.ui.StartActivity;
-import zedplus.gallery.ui.genres.ItemViewHolder;
+import zedplus.gallery.ui.genres.GenresRecyclerView;
 
 /**
  * Created by asavinova on 18/09/16.
@@ -18,6 +18,6 @@ public interface GalleryComponent {
 
 	void inject(GalleryActivity x);
 
-	void inject(ItemViewHolder x);
+	void inject(GenresRecyclerView x);
 
 }

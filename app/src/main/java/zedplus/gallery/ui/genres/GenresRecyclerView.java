@@ -12,6 +12,12 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import org.greenrobot.eventbus.EventBus;
+
+import javax.inject.Inject;
+
+import zedplus.gallery.App;
+
 /**
  * @author Anna Savinova
  */
@@ -19,10 +25,13 @@ public class GenresRecyclerView extends RecyclerView {
 
 	public static final float MAX_SCALE = 1.5f;
 
+	@Inject EventBus eventBus;
+
 	private GenresAdapter adapter;
 	private LinearLayoutManager layoutManager;
 	private int viewWidth;
 	private int itemWidth;
+	private long currentGenreId;
 
 	public GenresRecyclerView(Context context) {
 		super(context);
@@ -36,7 +45,9 @@ public class GenresRecyclerView extends RecyclerView {
 		super(context, attrs, defStyle);
 	}
 
-	public void init(GenresAdapter adapter) {
+	public void init(final GenresAdapter adapter) {
+		((App) getContext().getApplicationContext()).component().inject(this);
+
 		this.adapter = adapter;
 		layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 		setLayoutManager(layoutManager);
@@ -79,6 +90,11 @@ public class GenresRecyclerView extends RecyclerView {
 
 				View centerView = layoutManager.findViewByPosition(centerPosition);
 				ItemViewHolder centerHolder = (ItemViewHolder) recyclerView.findContainingViewHolder(centerView);
+
+				if (centerHolder != null && currentGenreId != centerHolder.getItemId()) {
+					currentGenreId = centerHolder.getGenreId();
+					eventBus.post(new OnGenreSelectedEvent(currentGenreId));
+				}
 
 				View leftView = layoutManager.findViewByPosition(centerPosition - 1);
 				ItemViewHolder leftHolder = (ItemViewHolder) recyclerView.findContainingViewHolder(leftView);
