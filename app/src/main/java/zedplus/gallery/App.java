@@ -2,6 +2,7 @@ package zedplus.gallery;
 
 import android.app.Application;
 
+import zedplus.gallery.client.ApiClient;
 import zedplus.gallery.dagger.GalleryModule;
 import zedplus.gallery.dagger.DaggerGalleryComponent;
 import zedplus.gallery.dagger.GalleryComponent;
@@ -12,13 +13,15 @@ import zedplus.gallery.dagger.GalleryComponent;
 public class App extends Application {
 
 	private GalleryComponent component;
+	private GalleryModule galleryModule;
 
 	@Override
 	public void onCreate() {
 		super.onCreate();
 
+		galleryModule = new GalleryModule();
 		component = DaggerGalleryComponent.builder()
-				.galleryModule(new GalleryModule())
+				.galleryModule(galleryModule)
 				.build();
 	}
 
@@ -26,4 +29,7 @@ public class App extends Application {
 		return component;
 	}
 
+	public void setClientType(Class<? extends ApiClient> type) {
+		galleryModule.setClientType(type);
+	}
 }

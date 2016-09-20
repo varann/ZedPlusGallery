@@ -1,4 +1,10 @@
 <resources>
 	<string name="app_name">Zedplus Gallery</string>
+	<string name="start">Zed+ Gallery Settings</string>
+
+	<string name="one_genre">Один жанр</string>
+	<string name="three_genres">Три жанра</string>
+	<string name="four_genres">Четыре жанра</string>
 	<string name="many_genres">Много жанров</string>
+
 </resources>

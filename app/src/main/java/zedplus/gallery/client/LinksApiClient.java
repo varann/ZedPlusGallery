@@ -72,6 +72,13 @@ public abstract class LinksApiClient implements ApiClient {
 		movies.add(new Movie(newId(), western.getId(), "Джанго освобожденный", "https://st.kp.yandex.net/im/kadr/2/0/4/kinopoisk.ru-Django-Unchained-2040535.jpg"));
 		movies.add(new Movie(newId(), western.getId(), "Великолепная семерка", "https://st.kp.yandex.net/im/kadr/2/8/0/kinopoisk.ru-The-Magnificent-Seven-2806942.jpg"));
 
+
+		Genre comedy = new Genre(newId(), "Комедия", "https://st.kp.yandex.net/im/kadr/1/8/7/kinopoisk.ru-Intouchables-1877733.jpg");
+		genres.add(comedy);
+
+		movies.add(new Movie(newId(), comedy.getId(), "1 + 1", "https://st.kp.yandex.net/im/kadr/1/8/7/kinopoisk.ru-Intouchables-1877733.jpg"));
+		movies.add(new Movie(newId(), comedy.getId(), "Бриджит Джонс 3", "https://st.kp.yandex.net/im/kadr/2/7/1/kinopoisk.ru-Bridget-Jones_27s-Baby-2717333.jpg"));
+
 	}
 
 	@Override
