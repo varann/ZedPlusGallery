@@ -30,4 +30,4 @@ APK: https://github.com/varann/ZedPlusGallery/releases/download/version%2F1.0.0/
 
 ##Результат
 
-[Демо с GIF файлом (11Mb) и скриншотами активностей](../blob/develop/DEMO.md)
+[Демо с GIF файлом (11Mb) и скриншотами активностей](../develop/DEMO.md)

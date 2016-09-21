@@ -1,6 +1,6 @@
 ##Demo
 
-<img src="https://github.com/varann/ZedPlusGallery/raw/develop/images/preview.gif"
+![](https://github.com/varann/ZedPlusGallery/raw/develop/images/preview.gif)
 
 Активность с выбором количества жанров:
 
