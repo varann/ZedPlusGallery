@@ -25,12 +25,9 @@ APK: https://github.com/varann/ZedPlusGallery/releases/download/version%2F1.0.0/
 Содержимое нижней ленты меняется со сменой центрального элемента верхней ленты (смена жанра). Она не зациклена, имеет начало и конец. Каждый элемент отображает картинку (условный стоп-кадр) и название фильма. Элементы должны сортироваться по алфавиту.
 Необходима возможность удобного добавления (в коде/файле ресурсов) новых элементов обеих лент для проверки функционала. По дефолту сделать 3 жанра.
 
-<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/task.png" width="300px" />
+<img src="https://github.com/varann/ZedPlusGallery/raw/develop/images/task.png" width="300px" />
 
 
 ##Результат
 
-<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/preview.gif" />
-
-<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/gallery.png" width="300px" />
-<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/genres-settings.png" width="300px" />
+[Демо с GIF файлом (11Mb) и скриншотами активностей](../blob/develop/DEMO.md)
