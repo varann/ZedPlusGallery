@@ -1,7 +1,7 @@
 # ZedPlusGallery
 Тестовое задание для Zed+
 
-APK: https://github.com/varann/ZedPlusGallery/releases/download/version%2F1.0.0/app-release.apk
+APK: https://github.com/varann/ZedPlusGallery/releases/download/version%2F1.0.0/zedplus-gallery-release.apk
 
 Для запуска доступны две активности:
 * Zed+ Gallery Settings -- можно переключать наборы жанров (1, 3, 4 и все доступные, т.е. 7).
@@ -15,3 +15,22 @@ APK: https://github.com/varann/ZedPlusGallery/releases/download/version%2F1.0.0/
 * Добавить новую имплементацию и ее имя в карту в классе `zedplus.gallery.client.ApiClient.Implementations`. 
 
 Либо изменить вывод количества жанров в любой из четырех доступных имплементаций, которые находятся в пакете `zedplus.gallery.client`.
+
+
+##Задание
+
+Необходимо реализовать экран с двумя прокручивающимися вручную лентами, расположенными друг над другом. Верхняя – это жанры, нижняя (дочерняя) – стоп-кадры из фильмов, относящихся к данному разделу.
+Верхняя лента – зациклена (бесконечная прокрутка). Должна поддерживать любое количество элементов (от одного). В спокойном состоянии на экране всегда 5 полностью видимых ячейки и 2 полускрытых. Если элементов ленты меньше, чем ячеек, которые должны одновременно быть видны на экране, имеющиеся элементы нужно дублировать.
+Элемент, становясь центральным, должен увеличиваться (и уменьшаться обратно, когда сменяется другим).
+Содержимое нижней ленты меняется со сменой центрального элемента верхней ленты (смена жанра). Она не зациклена, имеет начало и конец. Каждый элемент отображает картинку (условный стоп-кадр) и название фильма. Элементы должны сортироваться по алфавиту.
+Необходима возможность удобного добавления (в коде/файле ресурсов) новых элементов обеих лент для проверки функционала. По дефолту сделать 3 жанра.
+
+<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/task.png" width="300px" />
+
+
+##Результат
+
+<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/preview.gif" />
+
+<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/gallery.png" width="300px" />
+<img src="https://github.com/varann/ZedPlusGallery/blob/develop/images/genres-settings.png" width="300px" />
